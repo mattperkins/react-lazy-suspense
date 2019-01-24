@@ -17,7 +17,9 @@ export default (url, fetchOptions = {}) => {
     return value.data
   }
 
-  // or newly initialised cache must resolve request and convert to JSON
+  // add initial value to cache
+  cache.set(key, value)
+  // newly initialised cache resolves request and converts to JSON
   const promise = fetch(url, fetchOptions).then(res => res.json())
 
   // provide cache the fetched (res.json) data
