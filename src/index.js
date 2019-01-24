@@ -1,10 +1,13 @@
 import React, { Suspense } from "react"
 import ReactDOM from 'react-dom'
-import registerServiceWorker from './registerServiceWorker'
+import { Router } from "@reach/router"
+import Nav from "./Nav"
 import './css/reset.css'
 import './css/style.css'
 
-const Lazy = React.lazy(() => import("./Lazy"))
+const Home = React.lazy(() => import("./Home"))
+const Data = React.lazy(() => import("./Data"))
+const Calc = React.lazy(() => import("./Calc"))
 const Loading = () => <h1>Loading...</h1>
 
 // main ("ROOT") component 
@@ -15,15 +18,16 @@ class Root extends React.Component {
     return (
 
       <div className="wrapper">
-        <div className="row">
+        <Nav />
 
-          <div className="col-12">
-            <Suspense fallback={<Loading />}>
-              <Lazy />
-            </Suspense>
-          </div>
+        <Suspense fallback={<Loading />}>
+          <Router>
+            <Home path="/" />
+            <Data path="/data" />
+            <Calc path="/calc" />
+          </Router>
+        </Suspense>
 
-        </div>
       </div>
 
 
@@ -33,4 +37,3 @@ class Root extends React.Component {
 
 ReactDOM.render(<Root />,
   document.getElementById('root'))
-registerServiceWorker()
