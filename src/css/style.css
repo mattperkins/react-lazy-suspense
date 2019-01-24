@@ -1,0 +1,28 @@
+/* h1, input, button */
+:root{
+ --btn-primary: #a1d9f0; 
+ --blue: cornflowerblue;
+ --white: #f7f7f7;
+}
+h1{
+ font-weight: 100;
+ font-size: 5.2rem;
+ margin-bottom: -30px;
+}
+input {
+ margin-right: 10px;
+ margin-bottom: 10px;
+ box-shadow: none;
+}
+button{
+ background-color: var(--blue);
+ color: var(--white);
+ border-radius: 6px;
+}
+input, button{
+ font-size: .8rem;
+ letter-spacing: 1px;
+ border: 1px solid var(--blue);
+ outline: 0;
+ padding: 4px;
+}
