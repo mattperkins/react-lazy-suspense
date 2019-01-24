@@ -1,5 +1,5 @@
 import React, { Suspense } from "react"
-import ReactDOM from 'react-dom'
+import ReactDOM from "react-dom"
 import { Router } from "@reach/router"
 import Nav from "./Nav"
 import './css/reset.css'
