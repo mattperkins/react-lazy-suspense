@@ -10057,6 +10057,13 @@ worker-farm@^1.5.2:
   dependencies:
     errno "~0.1.7"
 
+workerpool@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/workerpool/-/workerpool-3.0.0.tgz#970d960f6db7505650af925f3873ac0bcb3438d1"
+  integrity sha512-R5FA5COAfCpF47lf1eismGOHR1gie5H4CFvyvJf6ALu6643Z5sZK1F/tS+c4eTBCm8hg65W+DWxkwSJBsWsfCw==
+  dependencies:
+    object-assign "4.1.1"
+
 wrap-ansi@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-2.1.0.tgz#d8fc3d284dd05794fe84973caecdd1cf824fdd85"
